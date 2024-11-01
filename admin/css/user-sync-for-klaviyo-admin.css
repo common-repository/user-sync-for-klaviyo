@@ -1,0 +1,162 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+.swk-container {
+   background: #ffffff;
+   padding: 10px 20px;
+   margin: 10px 0;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+   width: 100%;
+   box-sizing: border-box;
+}
+
+.swk-settings-left {
+   width: 68%;
+   float: left;
+   margin-bottom: 25px;
+}
+
+.swk-settings-right {
+   width: calc(31% - 20px);
+   float: left;
+   margin-left: 25px;
+}
+
+.swk-container ul {
+   list-style: disc;
+   margin: 20px;
+}
+
+.swk-container input[type="text"],
+.swk-container input[type="password"] {
+   display: block;
+   width: 100%;
+   padding: 0.375rem 0.75rem;
+   font-size: 1rem;
+   line-height: 1.5;
+   color: #495057;
+   background-color: #fff;
+   background-clip: padding-box;
+   border: 1px solid #ced4da;
+   border-radius: 0.25rem;
+   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+   height: auto !important;
+   margin-bottom: 5px;
+}
+
+.swk-container .key-reveal {
+   position: absolute;
+   right: 10px;
+   top: 10px;
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.swk-form-footer {
+   background: #dddddd;
+   width: 100%;
+   float: left;
+   padding: 20px;
+   box-sizing: border-box;
+}
+
+.swk-help-description, .swk-help-description a{
+   font-size: 12px;
+   text-decoration: none;
+   margin-top:5px;
+}
+.swk-help-description .dashicons{
+   width:12px;
+   height: 12px;
+   font-size: 12px;
+   margin-top:5px;
+}
+.swk-inline-code pre{
+   display: inline;
+   margin:0;
+   background:#f0f0f1;
+   color:#000;
+}
+
+.swk-toggle-header{
+   cursor: pointer;
+}
+
+.swk-toggle-header:hover{
+   text-decoration: underline;
+}
+.swk-toggle-container{
+   padding: 0 5px;
+   border-top: 1px solid #ddd;
+}
+#swk-progress-bar {
+   box-shadow: 2px 14px 15px -7px rgba(30, 166, 250, 0.36);
+   border-radius: 50px;
+   transition: all 0.5s;
+}
+
+#swk-progress-bar-container {
+   background-color: #f0f0f0;
+   height: 20px;
+   width: 100%;
+   margin: 30px 0;
+   border-radius: 50px;
+}
+
+#swk-progress-bar-container span {
+   margin-top: 5px;
+   display: inline-block;
+}
+
+#swk-progress-bar-container #swk-progress-text,
+#swk-progress-bar-container #swk-status-text {
+   font-size: 18px;
+   margin-left: 10px;
+}
+
+.loader {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   position: relative;
+   animation: rotate 1s linear infinite
+}
+
+.loader::before {
+   content: "";
+   box-sizing: border-box;
+   position: absolute;
+   inset: 0px;
+   border-radius: 50%;
+   border: 5px solid #000;
+   animation: prixClipFix 2s linear infinite;
+}
+
+@keyframes rotate {
+   100% {
+      transform: rotate(360deg)
+   }
+}
+
+@keyframes prixClipFix {
+   0% {
+      clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+   }
+
+   25% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+   }
+
+   50% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+   }
+
+   75% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+   }
+
+   100% {
+      clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+   }
+}
